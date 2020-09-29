@@ -44,15 +44,9 @@ function handle_key_05(pressed)
    keybow.set_key(keybow.DOWN_ARROW, pressed)
 end
 
--- Insert line above --
+-- Move cursor to end of line  --
 function handle_key_06(pressed)
-    if pressed then
-        keybow.set_modifier(keybow.LEFT_CTRL, keybow.KEY_DOWN)
-         keybow.set_modifier(keybow.LEFT_SHIFT, keybow.KEY_DOWN)       
-        keybow.tap_key("I", pressed)
-        keybow.set_modifier(keybow.LEFT_CTRL, keybow.KEY_UP)
-         keybow.set_modifier(keybow.LEFT_SHIFT, keybow.KEY_UP)  
-    end
+    keybow.set_key(keybow.END, pressed)
 end
 
 -- Illegible character --
